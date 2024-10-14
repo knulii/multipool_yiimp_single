@@ -10,6 +10,7 @@ source $HOME/multipool/yiimp_single/.wireguard.install.cnf
 
 echo -e " Building blocknotify and stratum...$COL_RESET"
 
+hide_output sudo apt-get install libmysqlclient-dev
 cd $STORAGE_ROOT/yiimp/yiimp_setup/yiimp
 cd $STORAGE_ROOT/yiimp/yiimp_setup/yiimp/blocknotify
 blckntifypass=`cat /dev/urandom | tr -dc 'a-zA-Z0-9' | fold -w 32 | head -n 1`
